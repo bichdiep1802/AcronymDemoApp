@@ -1,8 +1,24 @@
-Build system for Windows 10 App Demos
+A Demo of Acronym Search
 ============
+An app which allows to look up meanings of acronyms. It is also able to integrate with Cortana (Microsoft Voice Recognition Technology) by creating a Hosted Web App
+This app a local JSON object as a acronyms/definitions storage to retrieve definitions.
 
-Check out the [wiki](https://github.com/MicrosoftEdge/generator-appx/wiki) for more information
+Here's the link to the WebApp:
+http://bichdiep1802.github.io/demoApp/
 
-### Credits
-* Application icon: [web design by Simple Icons from the Noun Project](https://thenounproject.com/search/?q=code&i=32232)
-* Special thanks to [@phated](https://github.com/phated) for a most thorough code review
+Instructions of using voice commands 
+=============
+All voice commands requires the app's name which is Iona. The app's name could be called before or after the voice command phrase.
+There are some different ways to ask for defition of MVP using voice command:
+  - "Iona, show definition of MVP"
+  - "Iona, definition of MVP"
+  - "Iona, definition MVP"
+  - "Iona, what is MVP"
+  - "Iona, MVP"
+
+*** Follow the tutorial from the following to create a hosted web app ***
+https://microsoftedge.github.io/WebAppsDocs/en-US/win10/CreateHWA.htm
+
+
+
+
