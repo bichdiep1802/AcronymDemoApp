@@ -83,18 +83,3 @@ if (typeof Windows !== 'undefined') {
 } else {
 	console.log('Windows namespace is unavaiable');
 }
-
-(function(){
-	
-	var printListener = function(event){
-		console.log('------ Matched! ------');
-		console.log('target:', event.target);
-		console.log('selector:', event.selector);
-	}
-	
-	document.getElementById('searchButton').addEventListener('click', function(){
-		var value = document.getElementById('acronymInput').value;
-		if (value) document.addSelectorListener(value, printListener);
-	}, false);
-
-})();
