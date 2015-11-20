@@ -7,7 +7,8 @@ if (typeof Windows !== 'undefined') {
 		var activation = Windows.ApplicationModel.Activation;
 		// Check to see if the app was activated by a voice command
 		if (args.kind === activation.ActivationKind.voiceCommand) {
-			
+			console.log('Activated by a voice command');
+
 			// for testing only
 			var speechRecognitionResult = args.result;
 			var textSpoken = speechRecognitionResult.text;
@@ -33,6 +34,8 @@ if (typeof Windows !== 'undefined') {
 				// No valid command specified
 				console.log('No valid command specified');
 			}
+		} else {
+			console.log('Not activated by a voice command');
 		}
 	});
 } else {
