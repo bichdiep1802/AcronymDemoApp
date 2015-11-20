@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Acronym Search Demo </title>
+    <title> Acronym Search Demo </title>
     <meta name="msapplication-cortanavcd" content="http://bichdiep1802.github.io/demoApp/vcd.xml"/>
     <link rel="stylesheet" href="css/app.css" />
   </head>
@@ -24,8 +24,21 @@
     </div>
     <script src="./js/main.js"></script>
     <script src="./js/appBarColor.js"></script>
-    <script src="./bundles/bundle.js"></script>
-
+    <script type="text/javascript">
+    (function(){
+	
+	var printListener = function(event){
+		console.log('------ Matched! ------');
+		console.log('target:', event.target);
+		console.log('selector:', event.selector);
+	}
+	
+	document.getElementById('searchButton').addEventListener('click', function(){
+		var value = document.getElementById('acronymInput').value;
+		if (value) document.addSelectorListener(value, printListener);
+	}, false);
+    })();
+    </script>
   </body>
 </html>
 
