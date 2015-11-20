@@ -14,7 +14,7 @@
     <div id="inputSection">
     	<input id="acronymInput" type="text" />
     	<button id="searchButton"> Search </button>
-	<br><br>    
+	<br><br>
     </div>
 
     <div id="content">
@@ -25,13 +25,23 @@
     </div>
     <script src="./js/main.js"></script>
     <script src="./js/appBarColor.js"></script>
-    <script type="text/javascript">
-    	document.getElementById("searchButton").addEventListener("click", function(){
-	     var value = document.getElementById('acronymInput').value;
-	     if (value)  
-	    	document.getElementById('result').innerHTML = value;
-    	});
+    <script>
+    document.getElementById("searchButton").addEventListener("click", function(){
+	var value = document.getElementById('acronymInput').value;
+	if (value)  {
+	    var xmlhttp = new XMLHttpRequest();
+	    var url = "https://raw.githubusercontent.com/bichdiep1802/demoApp/master/src/fakedAcronyms.JSON";
+
+            xmlhttp.onreadystatechange=function() {
+    		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        	    var arr = JSON.parse(xmlhttp.responseText);
+        	    document.getElementById("result").innerHTML = arr[value];
+		}
+    	    }
+	    xmlhttp.open("GET", url, true);
+	    xmlhttp.send();
+	}
+    });  
     </script>
   </body>
 </html>
-
