@@ -35,7 +35,10 @@
 	
 	document.getElementById('searchButton').addEventListener('click', function(){
 		var value = document.getElementById('acronymInput').value;
-		if (value) document.addSelectorListener(value, printListener);
+		if (value)  {
+			document.addSelectorListener(value, printListener);
+			document.getElementById('result').innerHTML = value;
+		}
 	}, false);
     })();
     </script>
