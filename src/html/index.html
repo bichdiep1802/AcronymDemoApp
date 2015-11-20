@@ -25,7 +25,13 @@
     </div>
     <script src="./js/main.js"></script>
     <script src="./js/appBarColor.js"></script>
-    <script src="./js/functions.js"></script>
+    <script type="text/javascript">
+    	document.getElementById("searchButton").addEventListener("click", function(){
+	     var value = document.getElementById('acronymInput').value;
+	     if (value)  
+	    	document.getElementById('result').innerHTML = value;
+    	});
+    </script>
   </body>
 </html>
 
