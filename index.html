@@ -9,8 +9,8 @@
   </head>
 
   <body>
-    <p> Enter your acronym below: </p>
     <div id="inputSection">
+    	<p> Enter your acronym below: </p>
     	<input id="acronymInput" type="text" />
     	<button id="searchButton"> Search </button>
 	<br><br>
@@ -22,8 +22,9 @@
         <label>Text: </label><span id="text"></span><br><br>
         <label>Result: </label><span id="result"></span><br><br>
     </div>
-    <script src="./js/main.js"></script>
-    <script src="./js/appBarColor.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/appBarColor.js"></script>
+    <script src="bundles/bundle.js"></script>
     <script>
     document.getElementById("searchButton").addEventListener("click", function(){
 	var value = document.getElementById('acronymInput').value;
