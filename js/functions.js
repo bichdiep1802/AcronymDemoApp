@@ -23,5 +23,5 @@ function lookupAcronym(acronym) {
 	    	xmlhttp.open("GET", url, true);
 	    	xmlhttp.send();
 	}
-	return "sorry!";
+	return def;
 }
