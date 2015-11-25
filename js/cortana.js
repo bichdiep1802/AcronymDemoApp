@@ -23,9 +23,7 @@ if (typeof Windows !== 'undefined') {
 			// Determine the command type {play} defined in vcd
 			if (command === 'showDefinitionOfAcronym') {
 				// Determine the stream name specified
-				var definition = lookupAcronym(textSpoken);
-				console.log('The meaning of ' + textSpoken + ' is ' + definition);
-				document.getElementById('result').innerHTML = definition;
+				lookupAcronym(textSpoken);
 			}
 			else {
 				// No valid command specified
