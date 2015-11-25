@@ -13,7 +13,7 @@ if (typeof Windows !== 'undefined') {
 			var speechRecognitionResult = args.result;
 			var textSpoken = speechRecognitionResult.text;
 			var command = speechRecognitionResult.rulePath[0];
-
+			var property = speechRecognitionResult.semanticInterpretation.properties;
 			console.log('The command is: ' + command);
 			document.getElementById('command').innerHTML = command;
 			document.getElementById('speechReco').innerHTML = speechRecognitionResult;
@@ -23,7 +23,7 @@ if (typeof Windows !== 'undefined') {
 			// Determine the command type {play} defined in vcd
 			if (command === 'showDefinitionOfAcronym') {
 				// Determine the stream name specified
-				var acronym = speechRecognitionResult.semanticInterpretation.properties["acronym"][0];
+				var acronym = property["acronym"][0];
 				lookupAcronym(acronym);			
 			}
 			else {
