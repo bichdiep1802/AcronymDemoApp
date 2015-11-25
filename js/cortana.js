@@ -23,7 +23,8 @@ if (typeof Windows !== 'undefined') {
 			// Determine the command type {play} defined in vcd
 			if (command === 'showDefinitionOfAcronym') {
 				// Determine the stream name specified
-				lookupAcronym(textSpoken);
+				var acronym = speechRecognitionResult.semanticInterpretation.properties["acronym"][0];
+				lookupAcronym(acronym);			
 			}
 			else {
 				// No valid command specified
