@@ -13,22 +13,19 @@ if (typeof Windows !== 'undefined') {
 			var speechRecognitionResult = args.result;
 			var textSpoken = speechRecognitionResult.text;
 			var command = speechRecognitionResult.rulePath[0];
-			
-			var definition = "[...]"
-			var resultString = textSpoken + " is " + definition + "!";
 
 			console.log('The command is: ' + command);
 			document.getElementById('command').innerHTML = command;
 			document.getElementById('speechReco').innerHTML = speechRecognitionResult;
 			document.getElementById('text').innerHTML = textSpoken;
-			document.getElementById('result').innerHTML = resultString;
+
 
 			// Determine the command type {play} defined in vcd
 			if (command === 'showDefinitionOfAcronym') {
 				// Determine the stream name specified
-				console.log('The speech reco result is: ' + speechRecognitionResult);
-				console.log('The text spoken is: ' + textSpoken);
+				var definition = lookupAcronym(textSpoken);
 				console.log('The meaning of ' + textSpoken + ' is ' + definition);
+				document.getElementById('result').innerHTML = definition;
 			}
 			else {
 				// No valid command specified
