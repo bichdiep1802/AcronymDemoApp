@@ -10,7 +10,7 @@
 function lookupAcronym(acronym) {
 	if (acronym)  {
 	    	var xmlhttp = new XMLHttpRequest();
-	    	var url = "src/js/fakedAcronyms.JSON";
+	    	var url = "src/fakedAcronyms.JSON";
         	xmlhttp.onreadystatechange=function() {
 			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 				var arr = JSON.parse(xmlhttp.responseText);
