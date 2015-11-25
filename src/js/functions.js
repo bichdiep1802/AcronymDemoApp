@@ -18,6 +18,7 @@ function lookupAcronym(acronym) {
 			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 				var arr = JSON.parse(xmlhttp.responseText);
         	    		def = arr[acronym];
+        	    		console.log(acronym + " is " + def);
 			}
    		};
 	    	xmlhttp.open("GET", url, true);
