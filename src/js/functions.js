@@ -19,7 +19,7 @@ function lookupAcronym(acronym) {
 				var arr = JSON.parse(xmlhttp.responseText);
         	    		def = arr[acronym];
 			}
-   		}
+   		};
 	    	xmlhttp.open("GET", url, true);
 	    	xmlhttp.send();
 	}
