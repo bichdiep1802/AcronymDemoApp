@@ -5,7 +5,7 @@
     <title> Acronym Search Demo </title>
     <h1> Acronym Search Demo </h1>
     <meta name="msapplication-cortanavcd" content="http://bichdiep1802.github.io/AcronymDemoApp/vcd.xml"/>
-    <link rel="stylesheet" href="css/app.scss" />
+    <link href="css/styles.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -22,26 +22,8 @@
         <label>Text: </label><span id="text"></span><br><br>
         <label>Result: </label><span id="result"></span><br><br>
     </div>
-    <script src="js/main.js"></script>
+    <script> src="js/functions.js" </script>
+    <script src="js/cortana.js"></script>
     <script src="js/appBarColor.js"></script>
-    <script src="bundles/bundle.js"></script>
-    <script>
-    document.getElementById("searchButton").addEventListener("click", function(){
-	var value = document.getElementById('acronymInput').value;
-	if (value)  {
-	    var xmlhttp = new XMLHttpRequest();
-	    var url = "https://raw.githubusercontent.com/bichdiep1802/demoApp/master/src/fakedAcronyms.JSON";
-
-            xmlhttp.onreadystatechange=function() {
-    		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        	    var arr = JSON.parse(xmlhttp.responseText);
-        	    document.getElementById("result").innerHTML = arr[value];
-		}
-    	    }
-	    xmlhttp.open("GET", url, true);
-	    xmlhttp.send();
-	}
-    });  
-    </script>
   </body>
 </html>
