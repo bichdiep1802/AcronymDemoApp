@@ -16,14 +16,13 @@ if (typeof Windows !== 'undefined') {
 			var property = speechRecognitionResult.semanticInterpretation.properties;
 			console.log('The command is: ' + command);
 			document.getElementById('command').innerHTML = command;
-			document.getElementById('speechReco').innerHTML = speechRecognitionResult;
 			document.getElementById('text').innerHTML = textSpoken;
-
 
 			// Determine the command type {play} defined in vcd
 			if (command === 'showDefinitionOfAcronym') {
 				// Determine the stream name specified
 				var acronym = property["acronym"][0];
+				document.getElementById('acr').innerHTML = acronym;
 				lookupAcronym(acronym);			
 			}
 			else {
