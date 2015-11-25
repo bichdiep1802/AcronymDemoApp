@@ -1,5 +1,4 @@
- // button handler
-document.getElementById("searchButton").addEventListener("click", buttonHandler);
+ document.getElementById("searchButton").addEventListener("click", buttonHandler);
 
  // button handler
  function buttonHandler() {
@@ -9,20 +8,20 @@ document.getElementById("searchButton").addEventListener("click", buttonHandler)
 	document.getElementById("result").innerHTML = definition;
 }
 
-
  // function to look up for acronym's def
 function lookupAcronym(acronym) {
+	var def = "...";
 	if (acronym)  {
-	    var xmlhttp = new XMLHttpRequest();
-	    var url = "https://raw.githubusercontent.com/bichdiep1802/demoApp/master/src/fakedAcronyms.JSON";
-        xmlhttp.onreadystatechange=function() {
+	    	var xmlhttp = new XMLHttpRequest();
+	    	var url = "https://raw.githubusercontent.com/bichdiep1802/demoApp/master/src/fakedAcronyms.JSON";
+        	xmlhttp.onreadystatechange=function() {
 			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 				var arr = JSON.parse(xmlhttp.responseText);
-        	    return arr[acronym];
+        	    		def = arr[acronym];
 			}
    		}
-	    xmlhttp.open("GET", url, true);
-	    xmlhttp.send();
+	    	xmlhttp.open("GET", url, true);
+	    	xmlhttp.send();
 	}
-	return "sorry!";
+	return def;
 }
