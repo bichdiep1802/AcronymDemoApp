@@ -2,7 +2,7 @@
  function buttonHandler() {
     	var acronym = document.getElementById("acronymInput").value;
 	var definition = lookupAcronym(acronym);
-	console.log("The meaning of " + acronym + "" is "" + definition);
+	console.log("The meaning of " + acronym + " is " + definition);
 	document.getElementById("result").innerHTML = definition;
 }
  //document.getElementById("searchButton").addEventListener("click", function(){
