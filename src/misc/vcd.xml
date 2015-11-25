@@ -6,7 +6,7 @@
 
     <Command Name="showDefinitionOfAcronym">
       <Example> show definition of {acronym}</Example>
-      <ListenFor RequireAppName="BeforeOrAfterPhrase">[show] [definition] [of] {acronym}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">[show] definition of {acronym}</ListenFor>
       <Feedback> getting definition of {acronym} </Feedback>
       <Navigate Target="/showAcronymDefintion.htm"/>
     </Command>
