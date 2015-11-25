@@ -13,7 +13,7 @@ function lookupAcronym(acronym) {
 	var def = "...";
 	if (acronym)  {
 	    	var xmlhttp = new XMLHttpRequest();
-	    	var url = "https://raw.githubusercontent.com/bichdiep1802/demoApp/master/src/fakedAcronyms.JSON";
+	    	var url = "fakedAcronyms.JSON";
         	xmlhttp.onreadystatechange=function() {
 			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 				var arr = JSON.parse(xmlhttp.responseText);
