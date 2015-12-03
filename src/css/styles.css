@@ -1,45 +1,44 @@
-*, 
-*:before, 
-*:after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
- 
+header {
+    background-color:#26a3f6;
+    color:white;
+    text-align:center;
+    padding:5px; 
+}  
+
 body {
-    font-size: 1em;
+    FONT-FAMILY: Georgia, "Times New Roman", Times, serif;
+    FONT-SIZE: 1em;
+    COLOR: #4A4A4A;
+    BACKGROUND-COLOR: rgba(0, 0, 0, .1);
     line-height: 1.5;
-    font-family: Georgia, "Times New Roman", Times, serif;
     max-width: 43.75em; 
     margin: 0 auto;
     padding: 0;
-    color: #4A4A4A;
-}  
-     
-body p {
-    margin-top: -.625em;
-    text-indent: 7.75em; 
-    text-shadow: 0 1px 0px rgba(0, 0, 0, .15);
-    font-size: .875em; 
 }
- 
-header {
-     margin: 1em 0 2em;
+
+
+.inputSection {
+    FONT-WEIGHT: bold;
+    TEXT-ALIGN: center;
+    BACKGROUND-COLOR: #b2cbed
 }
- 
-header h1 {
-     text-shadow: 0 4px 2px rgba(0, 0, 0, .1);
-     margin: 0;
+
+.content {
+    FONT-WEIGHT: bold;
+
 }
-       
-header p {
-    margin-top: -.625em;
-    text-indent: 7.75em; 
-    text-shadow: 0 1px 0px rgba(0, 0, 0, .15);
-    font-size: .875em; 
+
+BUTTON { /*The same goes for the button*/
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;
+	FONT-SIZE: 15px;
+	COLOR: #FFFFFF;
+	BACKGROUND-COLOR:dodgerblue;
 }
-address {
-    margin-top: 1em;
-    padding-top: 1em;
-    border-top: thin dotted 
+
+footer {
+    background-color:rgba(0, 0, 0, .1);
+    color:black;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
 }
