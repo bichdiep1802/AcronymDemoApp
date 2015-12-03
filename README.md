@@ -10,11 +10,10 @@ Instructions of using voice commands
 =============
 All voice commands requires the app's name which is Iona. The app's name could be called before or after the voice command phrase.
 There are some different ways to ask for defition of MVP using voice command:
-  - "Iona, show definition of MVP"
-  - "Iona, definition of MVP"
-  - "Iona, definition MVP"
-  - "Iona, what is MVP"
-  - "Iona, MVP"
+  - "Terry, show definition of MVP"
+  - "Terry, definition of MVP"
+  - "Terry, definition MVP"
+  - "Terry, what is MVP"
 
 *** Follow the tutorial from the following to create a hosted web app ***
 https://microsoftedge.github.io/WebAppsDocs/en-US/win10/CreateHWA.htm
