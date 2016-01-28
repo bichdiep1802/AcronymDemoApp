@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
   <CommandSet xml:lang="en-us" Name="AcronymDemo">
-    <CommandPrefix> Terry, </CommandPrefix>
-    <Example> Terry, show definition of MVP </Example>
+    <AppName>Acronym App</AppName>
+    <Example> Acronym App, show definition of MVP </Example>
 
     <Command Name="showDefinitionOfAcronym">
       <Example> show definition of {acronym}</Example>
       <ListenFor RequireAppName="BeforeOrAfterPhrase">[show] definition [of] {acronym}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> what [is] {acronym}</ListenFor>
       <Feedback> getting definition of {acronym} </Feedback>
       <Navigate Target="/showAcronymDefintion.htm"/>
     </Command>
